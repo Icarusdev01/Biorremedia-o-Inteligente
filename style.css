@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 100%);
+  color: #cde6f5;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #88cfe0;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-panel,
+.center-panel,
+.right-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Esquerda */
+.oil-simulation {
+  background: linear-gradient(135deg, #111929 0%, #1a2335 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 12px #00ffff33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oil-simulation img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.oil-simulation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #00ffff44;
+}
+
+.oil-simulation.simulating img {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.results p {
+  margin: 0.5rem 0;
+  color: #aeeaff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.results strong {
+  color: #00ffff;
+}
+
+/* Centro */
+.center-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #111929 0%, #1a2335 100%);
+  border-left: 4px solid #00ffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffff22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #00ffff44;
+}
+/* Direita */
+.filters {
+  background: linear-gradient(135deg, #111929 0%, #1a2335 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px #00ffff22;
+}
+
+.filters h3 {
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.filters label {
+  display: block;
+  margin: 0.3rem 0 0.6rem 1rem;
+  color: #cde6f5;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filters input[type="radio"]:focus {
+  outline: 2px solid #00ffff;
+}
+
+.graph {
+  background: linear-gradient(135deg, #111929 0%, #1a2335 100%);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px #00ffff44;
+  border: 1px solid #00ffff33;
+}
+
+.graph img,
+.graph canvas {
+  width: 100%;
+  height: 400px; /* Altura maior para melhor visibilidade */
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.left-panel .graph {
+  margin-top: 1.5rem;
+}
+
+.features {
+  background: linear-gradient(135deg, #111929 0%, #1a2335 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffff22;
+}
+
+.features h3 {
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.features ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+#executar-simulacao {
+  background: linear-gradient(135deg, #00ffff 0%, #00cfcf 100%);
+  color: #0a0e1a;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+#executar-simulacao:hover {
+  background: linear-gradient(135deg, #00cfcf 0%, #00afaf 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 255, 255, 0.4);
+}
+
+#executar-simulacao:focus {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+#executar-simulacao:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .card, .oil-simulation, .filters, .graph, .features {
+    padding: 1.2rem;
+  }
+
+  #executar-simulacao {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}

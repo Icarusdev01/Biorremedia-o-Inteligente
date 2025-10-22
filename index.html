@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOPETRO - Biorremediação Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- CDN do Chart.js para criar gráficos dinâmicos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>BIOPETRO</h1>
+      <p>Plataforma Digital de Biorremediação Inteligente</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="left-panel">
+      <div class="oil-simulation">
+        <div  class="Simulação de Petróleo no Mar">
+        <div class="results">
+          <p> <strong> Simulação e Gráfico</strong></p>
+          <p><strong>Tempo de Limpeza Previsto:</strong> 15 dias</p>
+          <p><strong>Redução da Poluição:</strong> 92%</p>
+          <p><strong>Geração de Bioprodutos:</strong> Biossurfactantes</p>
+        </div>
+      </div>
+      <div class="graph">
+        <!-- Canvas para renderizar o gráfico dinâmico de redução de poluição -->
+        <canvas id="pollutionChart" width="400" height="200"></canvas>
+      </div>
+    </section>
+
+    <section class="center-panel">
+      <div class="card">
+        <h2>🧪 Simulação & Previsão</h2>
+        <p>Simula a ação de microrganismos na degradação do petróleo. Previsão de tempo, redução e Bioprodutos.</p>
+      </div>
+      <div class="card">
+        <h2>📊 Comparativo em Tempo Real</h2>
+        <p>Compara métodos tradicionais x biológicos: custos, impactos e tempo.</p>
+      </div>
+      <div class="card">
+        <h2>🌱 Resultados Claros & Bioprodutos</h2>
+        <p>Previsão de Bioprodutos sustentáveis. Interface simples e acessível.</p>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="filters">
+        <h3>Tipo de Ambiente:</h3>
+        <label><input type="radio" name="ambiente" value="marinho" checked> Marinho</label>
+        <label><input type="radio" name="ambiente" value="terrestre"> Terrestre</label>
+
+        <h3>Tipo de Petróleo:</h3>
+        <label><input type="radio" name="tipo" value="leve" checked> Leve</label>
+        <label><input type="radio" name="tipo" value="pesado"> Pesado</label>
+
+        <h3>Método:</h3>
+        <label><input type="radio" name="metodo" value="tradicional" checked> Tradicional</label>
+        <label><input type="radio" name="metodo" value="biológico"> Biológico</label>
+      </div>
+
+      <div class="features">
+        <h3>Características da Solução</h3>
+        <ul>
+          <li>Base científica validada</li>
+          <li>Modelagem digital interativa</li>
+          <li>Banco de dados robusto</li>
+          <li>Previsão de Bioprodutos</li>
+          <li>Comparativo direto</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="executar-simulacao">EXECUTAR SIMULAÇÃO</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
